@@ -48,7 +48,7 @@ function createWindowHeader(title) {
 
     //Allows for an icon next to the title in the header
     const windowIcon = document.createElement("img");
-    windowIcon.src = `./assets/${title}.png`;
+    windowIcon.src = `./assets/${title.toLowerCase()}.png`;
     windowIcon.className = "window__header__block__icon";
     windowIconTitle.appendChild(windowIcon);
 
