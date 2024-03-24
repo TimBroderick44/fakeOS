@@ -22,16 +22,17 @@ function createAppWindow(title) {
     windowFooter.className = "window__footer";
     appWindow.appendChild(windowFooter);
 
-    // Weird Firefox Bug
-    if (navigator.userAgent.includes("Firefox")) {
-        windowContent.style.height = "calc(100% - 113px);";
-    }
-
     // To make it look like 'Win95', need to seprate into separate divs.
     if (title === "Computer") {
         const windowFooterDiv1 = document.createElement("div");
         windowFooterDiv1.className = "window__footer__details";
         windowFooter.appendChild(windowFooterDiv1);
+
+        // Weird Firefox Bug
+        if (navigator.userAgent.includes("Firefox")) {
+            windowContent.style.padding = "10px 10px 6px 10px";
+            windowFooterDiv1.style.padding = "0 0 0 10px";
+        }
 
         const windowFooterDiv2 = document.createElement("div");
         windowFooterDiv2.className = "window__footer__blank";

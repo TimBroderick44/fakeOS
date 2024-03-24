@@ -11,7 +11,7 @@
     overflow: hidden;
     &__content {
         height: calc(100% - 113px);
-        padding: 10px;
+        padding: 10px; 
         border-left: solid 10px #c3bec3;
         border-right: solid 10px #c3bec3;
         box-shadow: inset -2px -2px 3px 0px #6964645e,
@@ -95,13 +95,12 @@
             border-left: 1px solid #7e7a7a; /* Left highlight */
             box-shadow: inset -1px -1px 1px 0px #69646454,
                 inset 1px 1px 3px 1px #4d4b4bd5;
-            padding: 2px;
         }
         &__details {
-            padding-left: 10px;
             flex-grow: 2;
             margin-left: 10px;
             margin-right: 4px;
+            padding: 2px 0 2px 10px;
         }
         &__blank {
             padding: 12px;

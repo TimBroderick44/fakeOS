@@ -275,13 +275,12 @@
   border-top: 1px solid #7e7a7a; /* Top highlight */
   border-left: 1px solid #7e7a7a; /* Left highlight */
   box-shadow: inset -1px -1px 1px 0px rgba(105, 100, 100, 0.3294117647), inset 1px 1px 3px 1px rgba(77, 75, 75, 0.8352941176);
-  padding: 2px;
 }
 .window__footer__details {
-  padding-left: 10px;
   flex-grow: 2;
   margin-left: 10px;
   margin-right: 4px;
+  padding: 2px 0 2px 10px;
 }
 .window__footer__blank {
   padding: 12px;
