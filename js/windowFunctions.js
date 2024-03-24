@@ -22,6 +22,11 @@ function createAppWindow(title) {
     windowFooter.className = "window__footer";
     appWindow.appendChild(windowFooter);
 
+    // Weird Firefox Bug
+    if (navigator.userAgent.includes("Firefox")) {
+        windowContent.style.height = "calc(100% - 113px);";
+    }
+
     // To make it look like 'Win95', need to seprate into separate divs.
     if (title === "Computer") {
         const windowFooterDiv1 = document.createElement("div");
