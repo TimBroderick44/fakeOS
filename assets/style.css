@@ -1,0 +1,486 @@
+body {
+    background: #008080;
+    margin: 0;
+    font-family: VT323, monospace;
+    font-size: 20px;
+    min-height: 100vh;
+    max-height: 100vh;
+}
+
+#desktop {
+    padding: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.icon {
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 125px;
+    margin-left: 0px;
+}
+
+.icon__text {
+    font-size: 28px;
+    text-align: center;
+    color: white;
+    margin-top: -1px;
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+    margin: -20px;
+}
+
+#start-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 99%;
+    height: 50px;
+    background-color: #c3bec3;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border: 2px solid rgb(245, 242, 242)
+}
+
+#start-button {
+    display: flex;
+    border-radius: 3px;
+    align-items: center;
+    background-color: #c3bec3;
+    font-family: VT323, monospace;
+    font-size: 28px;
+    font-weight: 600;
+    border: 1px solid #c2bebe; 
+    box-shadow: 
+        inset 1px 1px #dbd1d1,
+        inset -1px -1px #d8c9c9,
+        1px 1px #969191,
+        -1px -1px #b1a6a6; 
+    padding: 2px 6px; 
+    user-select: none; 
+    cursor: pointer; 
+}
+
+#start-button img {
+    margin: -10px -10px -10px -15px;
+    width: 60px;
+    height: 60px;
+}
+
+.taskbar {
+    margin-right: 2px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    background-color: #c9c6c9;
+    font-size: 28px;
+    font-weight: 400;
+    color: black;
+    padding: 5px 10px;
+    border: 2px solid #b6b1b1; 
+    box-shadow: 
+        inset 2px 0px #cec5c5,
+        inset 1px 0px #c9c5c5,
+        1px 0px #c9c5c5,
+        0px 1px #a8a1a1;
+}
+
+.taskbar img {
+    width: 40px;
+    height: 40px;
+    margin-left: -10px;
+}
+
+#clock {
+    margin-left: 10px;
+}
+
+.app-window {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 300px;
+    background-color: white;
+    border: 2px solid black;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.window-header {
+    background-color: #000080;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.close-btn {
+    border-radius: 50%;
+    float: right;
+    cursor: pointer;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 0 5px;
+}
+
+.window-toolbar {
+    display: flex;
+    background-color: #c3bec3;
+    padding: 2px;
+    justify-content: start;
+}
+
+.window-content {
+    padding: 10px;
+}
+
+.dropdown {
+    position: relative;
+    padding: 2px 6px;
+    margin-right: 2px;
+    cursor: default;
+    user-select: none;
+}
+
+.dropdown-content {
+    color: #000;
+    display: none;
+    position: absolute;
+    background-color: #c3bec3;
+    top: 26px;
+    left: -2px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content div {
+    padding: 12px 16px;
+    text-align: left;
+    background-color: #c3bec3;
+    border-bottom: 1px solid #ddd;
+}
+
+.resizers {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.resizer {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background: transparent;
+    pointer-events: auto;
+}
+
+.resizer.top-left {
+    left: -5px;
+    top: -5px;
+    cursor: nwse-resize; /* Top left corner */
+}
+
+.resizer.top-right {
+    right: -5px;
+    top: -5px;
+    cursor: nesw-resize; /* Top right corner */
+}
+
+.resizer.bottom-left {
+    left: -5px;
+    bottom: -5px;
+    cursor: nesw-resize; /* Bottom left corner */
+}
+
+.resizer.bottom-right {
+    right: -5px;
+    bottom: -5px;
+    cursor: nwse-resize; /* Bottom right corner */
+}
+
+.calculator {
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 20px;
+    height: 100%;
+    box-shadow: 0px 0px 10px #aaa;
+}
+
+.display {
+    width: 92%;
+    height: 10%;
+    background-color: #f2f2f2;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 40px;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    height: 100%;
+}
+
+.btn {
+    font-family: VT323, monospace;
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #e6e6e6;
+}
+
+.btn.clear,
+.btn.equals {
+    grid-column: span 3;
+}
+
+.btn.equals {
+    background-color: #4caf50;
+    color: white;
+}
+
+.btn.add,
+.btn.subtract,
+.btn.multiply,
+.btn.divide {
+    background-color: #f0ad4e;
+    color: white;
+}
+
+.minesweeper-grid {
+    display: grid;
+    gap: 2px;
+    border: 1px solid black;
+    width: 100%;
+    max-width: 400px;
+}
+
+.grid-cell {
+    background-color: #dcdcdc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    aspect-ratio: 1 / 1; 
+    overflow: hidden; 
+}
+
+.minesweeper__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.minesweeper__overlay__dialog {
+    background-color: #fff;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.minesweeper__overlay__dialog > p {
+    font-size: 22px;
+}
+
+#minesweeper__buttons {
+    display: flex;
+    justify-content: center;
+}
+
+#play-again,
+#close-dialog {
+    padding: 6px;
+    margin-right: 10px;
+    width: 50px;
+    font-family: VT323, monospace;
+    font-size: 18px;
+}
+
+.window-content .paint {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: start;
+    padding: 10px;
+    flex: 1;
+}
+
+#color-picker {
+    margin: 5px;
+    width: 90%;
+}
+
+.paint__clear {
+    width: 100px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.start-menu {
+    border-radius: 2px;
+    display: flex;
+    position: fixed;
+    bottom: 58px; 
+    left: 12px;
+    width: 400px;
+    height: 500px;
+    background-color: #c0c0c0;
+    border: 2px solid rgba(219, 212, 212, 0.315);
+    box-shadow: 2px 2px 2px rgba(107, 103, 103, 0.2);
+    z-index: 100;
+}
+
+.menu-all {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #c0c0c0;
+}
+
+.menu-title {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    background-color: #808082;
+    color: white;
+    padding: 5px;
+    text-align: left;
+    padding-top: 20px;
+    font-size: 52px;
+    font-weight: 400;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 40px;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+.menu-item:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: -1px;
+    background-color: #c0c0c0;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    height: 357px;
+    overflow: auto;
+    flex-direction: column;
+}
+
+.sub-menu-item {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    color: black;
+    flex-grow: 1;
+}
+
+.menu-icon {
+    width: 60px; 
+    height: 60px;
+    margin-right: 8px; 
+    vertical-align: middle; 
+}
+
+.drives__block {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.drives__block__drive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.drives__block__drive img {
+    width: 120px;
+    height: 120px;
+}
+
+.drives__block__drive p {
+    font-size: 26px;
+    margin-top: -5px;
+    text-align: center;
+}
+
+.drives__block__drive.selected {
+    outline: 1px solid rgb(134, 197, 218);
+    background-color: rgba(107, 154, 226, 0.2);
+}
+
+.icon.selected {
+    outline: 1px solid rgb(134, 197, 218);
+    background-color: rgba(107, 154, 226, 0.2);
+}
+
+#loadButton {
+    font-family: VT323, monospace;
+    font-size: 80px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: url(./Win95Setup.webp) no-repeat center center;
+    color: white;
+    z-index: 1000;
+}
+
+#loading-screen {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 500;
+}
+
+#loading-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: fill;
+}
