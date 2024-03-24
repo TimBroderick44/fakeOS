@@ -11,7 +11,7 @@ function initializeCalculator(contentElement) {
     const calculator = document.createElement("div");
     calculator.className = "calculator__app";
 
-    // Weird Firefox Bug
+    // Weird Firefox Bug... again
     if (navigator.userAgent.includes("Firefox")) {
         calculator.style.height = "450px"
     }
