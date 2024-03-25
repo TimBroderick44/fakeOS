@@ -6,7 +6,7 @@ I'm in my mid-30s so I grew up using Windows 95. This project was a great opport
 <h1 style="font-weight: 900"> Screenshots </h1>
 
 ## 1. Plain Old Desktop
-![Plain Old Desktop](./assets/screenshots/Desktop.png)
+![Plain Old Desktop](./assets/Screenshots/Desktop.png)
 
 ## 2. Check out that 'Start' bar! 
 ![Doesn't really do much though](./assets/Screenshots/startbar.PNG)
