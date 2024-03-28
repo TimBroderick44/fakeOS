@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Windows 95 Clone</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./css/style.css" />
+        <script type="module" src="./js/main.js" defer></script>
+    </head>
+
+    <body>
+        <div class="startup">
+            <button class="startup__button">
+                Click to get started with Windows 95!
+            </button>
+        </div>
+        <div class="loading">
+            <video class="loading__video" src="./assets/windows95.mp4"></video>
+        </div>
+        <audio class="loading__sound" src="./assets/win95.mp3"></audio>
+        <div class="desktop">
+            <div class="desktop__block">
+                <div class="desktop__block__icon computer">
+                    <img
+                        class="desktop__block__icon__img"
+                        src="./assets/computer.png"
+                        alt="Computer Icon"
+                    />
+                    <p class="desktop__block__icon__text">My Computer</p>
+                </div>
+                <div class="desktop__block__icon calculator">
+                    <img
+                        class="desktop__block__icon__img"
+                        src="./assets/calculator.png"
+                        alt="Calculator Icon"
+                    />
+                    <p class="desktop__block__icon__text">Calculator</p>
+                </div>
+                <div class="desktop__block__icon minesweeper">
+                    <img
+                        class="desktop__block__icon__img"
+                        src="./assets/minesweeper.png"
+                        alt="Minesweeper Icon"
+                    />
+                    <p class="desktop__block__icon__text">Minesweeper</p>
+                </div>
+                <div class="desktop__block__icon paint">
+                    <img
+                        class="desktop__block__icon__img"
+                        src="./assets/paint.png"
+                        alt="Paint Icon"
+                    />
+                    <p class="desktop__block__icon__text">Paint</p>
+                </div>
+            </div>
+            <div class="startbar">
+                <button class="startbar__button">
+                    <div class="startbar__button--dotted">
+                        <img
+                            class="startbar__button__img"
+                            src="./assets/windows 95.png"
+                            alt="Start Button"
+                        />
+                        <p class="startbar__button__text">Start</p>
+                    </div>
+                </button>
+
+                <div class="taskbar">
+                    <img
+                        class="taskbar__img"
+                        src="./assets/network.png"
+                        alt="network"
+                    />
+                    <img
+                        class="taskbar__img"
+                        src="./assets/desktop.png"
+                        alt="desktop"
+                    />
+                    <img
+                        class="taskbar__img"
+                        src="./assets/volume.png"
+                        alt="volume"
+                    />
+                    <div class="taskbar__clock"></div>
+                </div>
+            </div>
+        </div>
+        <div class="secret">
+            <video
+                id="self-destruct-video"
+                src="./assets/self-destruct.mp4"
+                style="display: none"
+            ></video>
+        </div>
+    </body>
+</html>

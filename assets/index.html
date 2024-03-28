@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Old School OS</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./style.css" />
+        <script src="./index.js" defer></script>
+    </head>
+    <body>
+        <div id="start-prompt">
+            <button
+                id="loadButton">
+                Click to get started with Windows 95!
+            </button>
+        </div>
+        <div id="loading-screen">
+            <video
+                id="loading-video"
+                src="./windows95.mp4"
+            ></video>
+        </div>
+        <audio id="startup-sound" src="./win95.mp3"></audio>
+        <div id="desktop">
+            <div class="icon-block">
+                <div class="icon" id="computer-icon">
+                    <img src="my-computer.png" alt="Computer Icon" />
+                    <p class="icon__text">My Computer</p>
+                </div>
+                <div class="icon" id="calculator-icon">
+                    <img src="calc.png" alt="Calculator Icon" />
+                    <p class="icon__text">Calculator</p>
+                </div>
+                <div class="icon" id="minesweeper-icon">
+                    <img src="minesweeper.png" alt="Minesweeper Icon" />
+                    <p class="icon__text">Minesweeper</p>
+                </div>
+                <div class="icon" id="paint-icon">
+                    <img src="paint.png" alt="Paint Icon" />
+                    <p class="icon__text">Paint</p>
+                </div>
+            </div>
+            <div id="start-bar">
+                <button id="start-button">
+                    <img src="./windows 95.png" alt="Start Button" />
+                    Start
+                </button>
+                
+                <div class="taskbar">
+                    <img src="./network.png" alt="Internet Explorer" />
+                    <img src="./desktop.png" alt="Internet Explorer" />
+                    <img src="./volume.png" alt="Internet Explorer" />
+                    <div id="clock"></div>
+                </div>
+            </div>
+        </div>
+        <video id="self-destruct-video" src="./Self-Destruct.mp4" style="display: none;"></video>
+    </body>
+</html>
