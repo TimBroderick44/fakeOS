@@ -1,5 +1,4 @@
-<h1 style="font-weight: 900"> FakeOS (AKA Windows 95 Clone) </h1>
-(https://timbroderick44.github.io/fakeOS/)
+<h1 style="font-weight: 900"> FakeOS (Windows 95 Clone) - https://tim-broderick.com/fakeOS/ </h1>
 
 I'm in my mid-30s so I grew up using Windows 95. This project was a great opportunity to go back and appreciate the archaic joy that Windows 95 brought while learning more about DOM traversal and manipulation.
 
